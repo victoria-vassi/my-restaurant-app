@@ -1,1 +1,30 @@
-show.html.erb
+<h1> Restaurants </h1>
+<p>
+  <strong> Name:</strong>
+  <%= @restaurant.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @restaurant.address %>
+</p>
+
+<p>
+  <strong>Phone Number:</strong>
+  <%= @restaurant.phone_number %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @restaurant.category %>
+</p>
+
+<h1>Reviews</h1>
+
+<% @reviews.each do |review| %>
+  <p><%= review.content %></p>
+  <p><%= review.rating %></p>
+<% end %>
+
+<%= link_to 'Add Review', new_restaurant_review_path(@restaurant) %> |
+<%= link_to 'Back', restaurants_path %>

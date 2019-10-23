@@ -1,1 +1,22 @@
-create.html.erb
+<h1> New Restaurant </h1>
+
+<%= form_for(@restaurant) do |f| %>
+
+ <div>
+  <div class="form">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+
+  <div class="forms">
+    <%= f.label :content %>
+    <%= f.text_field :content, class: 'form-control' %>
+  </div>
+
+  <%= f.submit value = "Create Article", class: 'btn btn-primary' %>
+  <% end %>
+</div>
+
+<div>
+  <%= link_to "Back" , articles_path %>
+</div>
