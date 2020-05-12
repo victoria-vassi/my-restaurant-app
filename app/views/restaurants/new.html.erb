@@ -1,7 +1,12 @@
-<div class="container">
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+  My favorite Restaurants
+</div>
+
+
+<div class="container new-resto">
   <div class="row">
     <div class="col-md-6 mx-auto">
-      <div class="card p-5" >
+      <div class="card p-3" >
         <h1>New Restaurant</h1>
           <%= render 'form', restaurant: @restaurant, class: "btn btn-flat" %>
           <%= link_to 'Back', restaurants_path, class: "btn btn-flat" %>
