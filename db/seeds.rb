@@ -1,10 +1,7 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
 puts 'Cleaning database...'
 Restaurant.destroy_all
 
@@ -12,40 +9,34 @@ puts 'Creating restaurants...'
 
 restaurants_attributes = [
   {
+    name: 'Social Eating House',
+    address: '58 Poland St, Soho, London W1F 7NR',
+    phone_number: '0787317978',
+    category: 'British'
+  },
+  {
     name: 'Dishoom',
-    address: '7 Boundary St, London E2 7JE',
+    address: '12 Upper St. Martins Lane, London WC2H 9FB',
     phone_number: '0787317978',
-    category: 'chinese'
+    category: 'Indian'
   },
   {
-    name: 'Pizza East',
-    address: '56A Shoreditch High St, London E1 6PQ',
+    name: 'Pizza Pilgrims',
+    address: '11 Dean Street, London W1D 3RP',
     phone_number: '0787317978',
-    category: 'italian'
-  },
-  {
-    name: 'Frog',
-    address: 'Covent Garden',
-    phone_number: '0787317978',
-    category: 'french'
+    category: 'Italian'
   },
   {
     name: 'Le Pain Quotidien',
-    address: '56A Shoreditch High St, London E1 6PQ',
+    address: 'Jubilee Place Unit 84, London E14 5NY',
     phone_number: '0787317978',
-    category: 'belgian'
-  },
-  {
-    name: 'Lola',
-    address: '56A Shoreditch High St, London E1 6PQ',
-    phone_number: '0787317978',
-    category: 'italian'
+    category: 'Belgian'
   },
   {
     name: 'Sushi Samba',
-    address: '56A Shoreditch High St, London E1 6PQ',
+    address: 'Heron Tower, London EC2N 4AY',
     phone_number: '0787317978',
-    category: 'japanese'
+    category: 'Japanese'
   }
 ]
 

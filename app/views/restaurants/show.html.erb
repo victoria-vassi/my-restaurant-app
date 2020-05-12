@@ -1,23 +1,31 @@
-<h1> Restaurants </h1>
-<p>
-  <strong> Name:</strong>
-  <%= @restaurant.name %>
-</p>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+  My favourite Restaurants
+</div>
 
-<p>
-  <strong>Address:</strong>
-  <%= @restaurant.address %>
-</p>
 
-<p>
-  <strong>Phone Number:</strong>
-  <%= @restaurant.phone_number %>
-</p>
+<div class="home">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Phone Number</th>
+        <th>Category</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
 
-<p>
-  <strong>Category:</strong>
-  <%= @restaurant.category %>
-</p>
+    <tbody>
+        <tr>
+          <td><%= @restaurant.name %></td>
+          <td><%= @restaurant.address %></td>
+          <td><%= @restaurant.phone_number %></td>
+          <td><%= @restaurant.category %></td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+
 
 <h1>Reviews</h1>
 
