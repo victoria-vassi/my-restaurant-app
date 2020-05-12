@@ -1,0 +1,55 @@
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #00bf6a;
+  transition: background 0.3s ease;
+}
+
+.btn-flat:hover {
+  background: #1BCB7F;
+  color: white;
+  text-decoration: none;
+}
+
+.btn-flat-grey {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #777777;
+  transition: background 0.3s ease;
+}
+
+.btn-flat-grey:hover {
+  background: #888888;
+  color: white;
+  text-decoration: none;
+}
+
+.btn-flat-light {
+  color: black;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #EEEEEE;
+  transition: background 0.3s ease;
+}
+
+.btn-flat-light:hover {
+  background: #FFFFFF;
+  color: black;
+  text-decoration: none;
+}
+
+#review-button a:link, #review-button a:visited, #review-button a:hover, #review-button a:active,  {
+    text-decoration:none;
+}
+
+#review-button-new a:link, #review-button-new a:visited, #review-button-new a:hover, #review-button-new a:active,  {
+    text-decoration:none;
+}
+
+#review-button-new{
+  display: flex;
+  justify-content: end;
+}
+

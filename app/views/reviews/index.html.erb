@@ -1,0 +1,43 @@
+<header id="content-header">
+  <div class = "d-flex justify-content-center">
+    <img src="user.png" alt=""  class="rounded" style = "max-width: 200px; max-height: 300px; text-align: center">
+  </div>
+</header>
+
+<div class="container">
+
+  <div class = "d-flex justify-content-center border-bottom-1">
+    <h1>Reviews and Comments for <%= link_to(@restaurant.name, @restaurant) %></h1>
+  </div>
+
+  <div style = "text-align: center"><h3>Overall Rating: <%= @overall_rating %></h3></div>
+
+  <% @reviews.each do |review| %>
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid"/>
+          <p class="text-secondary text-center"><%= time_ago_in_words(review.created_at) %> ago</p>
+        </div>
+        <div class="col-md-10">
+          <p>
+           <strong><%= review.name %></strong></a>
+           <% (review.stars).times do %>
+           <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+           <% end %>
+          </p>
+          <div class="clearfix"></div>
+            <p> &quot;<%= review.content %>&quot;</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+
+  <div class = "d-flex justify-content-center">
+    <button type="button" class="btn btn-primary btn-lg"><%= link_to "Write Review", new_restaurant_review_path(@restaurant), style: "color: white;" %>
+    </button>
+    <%= link_to "Back", restaurants_path, :class => "btn btn-flat"%>
+   </div>
+</div>

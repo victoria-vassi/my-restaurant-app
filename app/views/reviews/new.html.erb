@@ -1,11 +1,28 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6 mx-auto">
-      <%= simple_form_for [@restaurant, @review ] do |f| %>
-      <%= f.input :content %>
-      <%= f.input :rating %>
-      <%= f.button :submit %>
-  <% end %>
+      <div class="card p-5 m-5" >
+
+        <h3> Create New Review </h3>
+
+
+        <%= simple_form_for([@restaurant, @review])  do |f| %>
+        <div class="form-inputs review-input">
+            <%= f.select :rating, Review::RATINGS, prompt: "Number of Stars" %>
+        </div>
+
+        <div class="form-inputs review-input">
+            <%= f.input :content,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "Comment" } %>
+          </div>
+
+            <div class="form-actions">
+              <%= f.button :submit, "Create New Review", class: "btn btn-flat button-submit"%>
+            </div>
+          <% end %>
+      </div>
     </div>
   </div>
 </div>
