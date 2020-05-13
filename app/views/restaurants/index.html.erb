@@ -17,8 +17,8 @@
           <td><%= restaurant.address %></td>
           <td><%= restaurant.phone_number %></td>
           <td><%= restaurant.category %></td>
-          <td><%= link_to 'Show', restaurant %></td>
-          <td><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to '<i class="far fa-eye"></i>'.html_safe, restaurant %></td>
+          <td><%= link_to '<i class="far fa-trash-alt"></i>'.html_safe, restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
