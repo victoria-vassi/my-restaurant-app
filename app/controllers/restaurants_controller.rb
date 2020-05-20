@@ -1,10 +1,11 @@
 class RestaurantsController < ApplicationController
+  before_action :set_restaurant, only: [:destroy, :show]
+
   def index
     @restaurants = Restaurant.all
   end
 
   def show
-    @restaurant = Restaurant.find(params[:id])
   end
 
   def new
@@ -22,7 +23,6 @@ class RestaurantsController < ApplicationController
   end
 
   def destroy
-    @restaurant = Restaurant.find(params[:id])
     @restaurant.destroy
     redirect_to restaurants_path
   end
