@@ -27,6 +27,17 @@ class RestaurantsController < ApplicationController
     redirect_to restaurants_path
   end
 
+  def show
+    @reviews = @restaurant.reviews
+    score = 0
+      @reviews.each{|review| score += review.rating }
+      if @reviews.count == 0
+        @overall_rating = 0
+      else
+        @overall_rating = sprintf('%.2f', (score / @reviews.count)) #round two decimals points
+      end
+  end
+
   private
 
   def set_restaurant

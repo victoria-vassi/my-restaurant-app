@@ -14,12 +14,11 @@
               </div>
               <div class="col-md-10">
                 <p>
-                  <strong><%= review.name %></strong></a>
-                  <% (review.stars).times do %>
+                  <% (review.rating).times do %>
                     <span class="float-right"><i class="text-warning fa fa-star"></i></span>
                   <% end %>
                 </p>
-                <p> &quot;<%= review.comment %>&quot;</p>
+                <p> &quot;<%= review.content %>&quot;</p>
               </div>
             </div>
           </div>
