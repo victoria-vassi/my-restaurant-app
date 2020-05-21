@@ -5,7 +5,7 @@
 
         <h3> Create New Review </h3>
 
-        <%= simple_form_for([@restaurant, @review])  do |f| %>
+        <%= simple_form_for(restaurant_reviews_path)  do |f| %>
         <div class="form-inputs review-input">
             <%= f.select :rating, Review::RATINGS, prompt: "Number of Stars" %>
         </div>
